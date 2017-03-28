@@ -2,9 +2,13 @@
 
     var c = console.log;
 // Trigger the second countdown timer
-    var secondTimer = false;
+    var secondTimer = false,
+        timerRow = $('#timerrow'),
+        deadTimerRow = $('#timerdeadrow');
     
-// tavle html
+deadTimerRow.hide();
+    
+// table html
     var timerTable = ''
                     + '<table class="table">'
                     + '<thead>'
@@ -32,7 +36,7 @@
                     + '</table>'
 
     //Countdown Begin
-    $('#getting-started').countdown('2017/3/28 9:59:55')
+    $('#getting-started').countdown('2017/3/28 10:16:00')
   
         
         .on('update.countdown', function (event) {
@@ -42,28 +46,27 @@
         })
         .on('finish.countdown', function(event){
         
-        var $this = $(this);
-        var $form = $('.formsection').show();
-        $this.hide();
-        secondTimer = true;
-            //Second Timer
+            var $this = $(this);
+            var $form = $('.formsection').show();
+            timerRow.hide();
+            secondTimer = true;
+                //Second Timer
                 if (secondTimer){
-                    $('#getting-deadline').show();
-                    $('#getting-deadline').countdown('2017/04/01 12:00:00')
+                    deadTimerRow.show();
+                    $('#getting-deadline').countdown('2017/03/28 10:16:15')
                         .on('update.countdown', function(e){
                             var $that = $(this);
                             $that.html(e.strftime('' + timerTable ))
                     })
-                    .on('finish.coutdown', function(e){
+                    .on('finish.countdown', function(e){
                         var $this = $(this);
                         $('.formsection').hide();
+                        $this.html('<h2 class="text-center">Registration is Now Closed</h2>'
+                                  + '<p class="text-center" style="padding: 15px">Visit <a href="http://www.granitehomes.ca">Granite Homes</a> to see more of our communities</p>');
                     });
                 }
         });
     
-
-
-
 //Tilt
 $('#logo').tilt({
     glare: true,
