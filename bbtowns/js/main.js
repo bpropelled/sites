@@ -61,15 +61,7 @@
             $('.formsection').hide();
         });
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 
 //Tilt
 $('#logo').tilt({
