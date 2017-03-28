@@ -32,7 +32,7 @@
                     + '</table>'
 
     //Countdown Begin
-    $('#getting-started').countdown('2017/3/29 9:00:00')
+    $('#getting-started').countdown('2017/3/28 9:59:55')
   
         
         .on('update.countdown', function (event) {
@@ -44,23 +44,24 @@
         
         var $this = $(this);
         var $form = $('.formsection').show();
-//        $this.html('<h1>Done</h1>');
+        $this.hide();
         secondTimer = true;
+            //Second Timer
+                if (secondTimer){
+                    $('#getting-deadline').show();
+                    $('#getting-deadline').countdown('2017/04/01 12:00:00')
+                        .on('update.countdown', function(e){
+                            var $that = $(this);
+                            $that.html(e.strftime('' + timerTable ))
+                    })
+                    .on('finish.coutdown', function(e){
+                        var $this = $(this);
+                        $('.formsection').hide();
+                    });
+                }
         });
     
-    //Second Timer
-    if (secondTimer){
-        
-        $('#getting-deadline').countdown('2017/04/01 12:00:00')
-            .on('update.countdown', function(e){
-                var $this = $(this);
-                $this.html(event.strftime('' + timerTable ))
-        })
-        .on('finish.coutdown', function(e){
-            var $this = $(this);
-            $('.formsection').hide();
-        });
-    }
+
 
 
 //Tilt
