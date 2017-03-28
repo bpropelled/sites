@@ -38,3 +38,5 @@ Thumbs.db
 
 # Ignore the DB
 bbtowns/scripts/connection.php
+bbtowns/scripts/email.html
+bbtowns/scripts/appt_and_contact.php
