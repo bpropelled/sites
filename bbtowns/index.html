@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blackbridge Towns VIP Registration</title>
+    <!--    CSS     -->
+    <!--   Bulma is the choice for today folks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--    Setup the Base      -->
+    <!--     <base href="http://www.bbtowns.ca/" target="_blank">    -->
+    <style>
+    #formloading, #formsuccess, #formfail {
+	display: none;
+    }
+    </style>
+</head>
+
+<body>
+   
+<!--   Header Section  -->
+    <section id="header">
+        <div class="container">
+            <div class="col-lg-12 centered">
+                <center><img src="img/bblogo-reg-w.png" class="img-responsive" id="logo" alt=""></center>
+            </div>
+        </div>
+    </section>
+    
+        <div class="container" style="margin-top:25px;">
+        <div class="row">
+            <div class="col-lg-12 ">
+               <h1 class="text-center">Random Selection Registration</h1>
+                   <p class="intro">
+                    Due to overwhelming demand for the final phase of Blackbridge Towns, Granite Homes will be conducting a random selection process for those that register for it. </p>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="container-fluid" style="background-color: #000">
+    <div class="row">
+        <img src="img/towns-effect2.png" class="img-responsive" alt="">
+    </div>
+</div>
+-->
+    <!--   Set the Stage with a timer  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 " id="countd">
+                <h2 class="timertitle">Registration Begins</h2>
+            </div>
+            <div class="col-lg-12" id="timer">
+                <div id="getting-started">
+                
+                </div>
+                <div id="getting-deadline">
+                
+                </div>
+            </div>
+            
+        </div>
+        
+         <div class="row formrow formsection">
+                <div class="formtop zero">
+                </div>
+                <div class="col-lg-10 col-lg-offset-1 zero formbk" style="margin-bottom:5%">
+                    <!--
+                        <p class="lead text-center white" style="padding: 25px">Be the first to know about Blackbridge Towns.
+                            <br> Complete the form below to be added to our VIP Launch list.</p>
+-->
+                    <!--
+                         <h2>be"the"first"to"know</h2>
+-->
+                    <h1 class="hit-the-floor text-center">Register Now</h1>
+                     <h2>The random selection process is now open!</h2>
+            <p>If you would like to be considered to purchase a home at Blackbridge Towns in Cambridge, please enter the selection process by completing a form with your information. The selection process will close on Thursday, March 30, 2017 at 10:00 AM EST. Entrants may not submit on behalf of someone else. Entrants may only submit one form. Those selected for the opportunity to purchase will be selected by a random drawing under the supervision of Granite Homes East Inc. Selected entrants will be notified by email and telephone on Thursday, March 30, 2017. Those who are selected for the opportunity to purchase must respond within 24 hours. </p>
+                   <br />
+                   <br />
+                   <br />
+                    <form class="form-horizontal" id="registrationForm">
+                        <fieldset>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="_fid_11">First Name</label>
+                                <div class="col-md-7">
+                                    <input id="_fid_11" name="_fid_11" type="text" placeholder="Enter Your First Name" class="form-control input-md" required>
+                                </div>
+                            </div>
+                            <!-- Password input-->
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="_fid_12">Last Name</label>
+                                <div class="col-md-7">
+                                    <input id="_fid_12" name="_fid_12" type="text" placeholder="Enter Your Last Name" class="form-control input-md" required>
+                                </div>
+                            </div>
+                            <!-- Search input-->
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="_fid_14">Phone Number</label>
+                                <div class="col-md-7">
+                                    <input id="_fid_14" name="_fid_14" type="text" placeholder="Enter Your Phone Number" class="form-control input-md" required>
+                                </div>
+                            </div>
+                            <!-- Search input-->
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="_fid_13">Email Address</label>
+                                <div class="col-md-7">
+                                    <input id="_fid_13" name="_fid_13" type="email" placeholder="Enter Your Email Address" class="form-control input-md" required>
+                                </div>
+                            </div>
+                            <!-- Search input-->
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="_fid_15">City</label>
+                                <div class="col-md-7">
+                                    <input id="_fid_15" name="_fid_15" type="search" placeholder="Enter Your City" class="form-control input-md" required>
+                                </div>
+                            </div>
+                            <!-- Search input-->
+                            <div class="form-group">
+                                <label class="col-md-6 control-label" for="_fid_29">Are you Working With a Realtor?</label>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="_fid_29" name="_fid_29">
+                                        <option disabled="disabled" selected="selected">Please Select</option>
+                                        <option value="Yes">YES</option>
+                                        <option value="No">NO</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Search input-->
+                            <div id="realtorfield" class="form-group hide">
+                                <label class="col-md-4 control-label" for="_fid_30">Realtor's Name</label>
+                                <div class="col-md-4">
+                                    <input id="_fid_30" name="_fid_30" type="text" placeholder="Enter Your Realtor's Name" class="form-control input-md">
+                                </div>
+                            </div>
+                            <!-- Search input-->
+                            <div class="form-group">
+                                <label class="col-md-6 control-label" for="_fid_16">Can Granite Homes Email You?</label>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="_fid_16" name="_fid_16">
+                                        <option disabled="disabled" selected="selected">Please Select</option>
+                                        <option value="Yes">YES</option>
+                                        <option value="No">NO</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Search input-->
+                            <div class="form-group padtop2">
+                                <br />
+                                <center>
+                                    <input id="submit" type="submit" class=" btn btn-default btn-lg " value="Submit Your Information">
+                                </center>
+                            </div>
+                            <br>
+                        </fieldset>
+                    </form>
+                    <!--Form End-->
+<!--Create the Visual Panel-->
+            <div class="row">
+                <!--Panel Loading -->
+                <div class="col-lg-12" id="formloading">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                             Please wait, your submission is being entered.
+                        </div>
+                    </div>
+                </div>
+                <!--Panel Success -->
+                <div class="col-lg-12" id="formsuccess">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Thank you the form was submitted properly.
+                        </div>
+                    </div>
+                </div>
+                <!--Panel Error -->
+                <div class="col-lg-12" id="formfail">
+                    <div class="panel panel-danger">
+                       <div class="panel-heading">
+                           Please check your form, there were errors.
+                       </div>
+                    </div>
+                </div>
+            </div>  
+<!--End the visual panel-->
+                </div>
+
+            </div>
+    </div>
+    
+<!--    Main Info Header -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Only 5 Homes Left!</h1>
+            
+                
+            </div>
+        </div>
+        
+<!--        Home Design Section  -->
+        <div class="row homedesigns" style="margin-top: 50px;">
+            <div class="col-lg-12">
+                <!--           Card 1     -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12  card">
+                    <div class="col-lg-12 topdets">
+                        <img src="img/wellesley.jpg" class="img-responsive" alt="">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dets">
+                        <p class="lots">LOT 30 | END UNIT</p>
+                        <h2 class="modelname">The Wellesley</h2>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">SQ.FT.</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">BEDS</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">BATHS</div>
+                        </div>
+                        <div class="row detsofdets">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">1,711</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">3</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">2.5</div>
+                        </div>
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <a href="#" class="btn btn-md btn-default">View Floorplans</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--           Card 1     -->
+                <!--           Card 1     -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 card">
+                    <div class="col-lg-12 topdets">
+                        <img src="img/elgin.jpg" class="img-responsive" alt="">
+                    </div>
+                    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 dets">
+                        <p class="lots">LOT 31-32 | INTERIOR UNIT</p>
+                        <h2 class="modelname">The Elgin</h2>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">SQ.FT.</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">BEDS</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">BATHS</div>
+                        </div>
+                        <div class="row detsofdets">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">1,711</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">3</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">2.5</div>
+                        </div>
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-lg-12">
+                                <a href="#" class="btn btn-md btn-default">View Floorplans</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--           Card 1     -->
+                <!--           Card 1     -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12  card">
+                    <div class="col-lg-12 topdets">
+                        <img src="img/Huron.jpg" class="img-responsive" alt="">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dets">
+                        <p class="lots">LOT 33 | INTERIOR UNIT</p>
+                        <h2 class="modelname">The Huron</h2>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">SQ.FT.</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">BEDS</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">BATHS</div>
+                        </div>
+                        <div class="row detsofdets">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">1,711</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">3</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">2.5</div>
+                        </div>
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-lg-12">
+                                <a href="#" class="btn btn-md btn-default">View Floorplans</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--           Card 1     -->
+                <!--           Card 1     -->
+                <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 card">
+                    <div class="col-lg-12 topdets">
+                        <img src="img/Parkhill.jpg" class="homeimg" alt="">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dets">
+                        <p class="lots">LOT 34 | END UNIT</p>
+                        <h2 class="modelname">The Parkhill</h2>
+                        <div class="row detstitle">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">SQ.FT.</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">BEDS</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">BATHS</div>
+                        </div>
+                        <div class="row detsofdets">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">1,711</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">3</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">2.5</div>
+                        </div>
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-lg-12">
+                                <a href="#" class="btn btn-md btn-default">View Floorplans</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--           Card 1     -->
+            </div>
+            <div class="col-lg-12">
+                <p class="intro">
+                    Boasting over 1,540 square feet of enjoyable living space, these luxury townhomes feature outstanding kitchens, designer bathrooms and ensuites plus striking stone and brick exteriors. An open-concept main floor is ideal for the entertainers lifestyle, while a spacious deck off the great room provides a quiet spot to unwind and enjoy the natural views. With premium included features, such as granite countertops in the kitchen and bathrooms, these town homes are as breathtaking as their scenic surroundings.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- This is the Contact Form Section -->
+    <section class="formsection" id="register">
+        <div class="container">
+           
+           
+
+            <div class="row" id="contact">
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form End -->
+    
+    <!-- FOOTER-->
+    <footer class="foot">
+        <div class="ftlogo">
+            <a href="http://granitehomes.ca"><img src="img/footlogo.png" alt=""></a>
+        </div>
+        <div class="container">
+            <div class="row" id="socialtop">
+                <div class="col-lg-12">
+                    <center>
+                        <p>Follow Us</p>
+                        <div class="socials">
+                            <a href="https://www.facebook.com/GraniteHomes"><i class="fa fa-facebook-square fa-2x white"></i></a>
+                            <a href="https://twitter.com/GraniteHomes"><i class="fa fa-twitter-square fa-2x white"></i></a>
+                            <a href="https://www.instagram.com/granite_homes/"><i class="fa fa-instagram fa-2x"></i></a>
+                            <!--                                <i class="fa fa-instagram fa-2x"></i>-->
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footbottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright <span id="year"></span> // Granite Homes // All Rights Reserved</p>
+                </div>
+                <div class="col-lg-12">
+                    <p>The prices, plans, amenities, availability, and improvements shown are subject to change without notice. Illustrations are artists' depictions only, are not necessarily to scale and may differ from completed improvements, and scenes may include locations or activities not on or near the property.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER-->
+    <!--    Add the JSseses -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/tilt.jquery.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#registrationForm").validate({
+                rules: {
+                    _fid_11: "required",
+                    _fid_12: "required",
+                    _fid_13: "required",
+                    _fid_14: "required",
+                    _fid_15: "required",
+                    _fid_16: "required"
+                },
+                messages: {
+                    _fid_11: "Please specify your first name",
+                    _fid_12: "Please specify your last name",
+                    _fid_13: "Please specify your email address",
+                    _fid_14: "Please specify your phone number",
+                    _fid_15: "Please specify your city",
+                    _fid_16: "Please specify your consent"
+                }
+            })
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

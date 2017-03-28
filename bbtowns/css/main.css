@@ -1,0 +1,277 @@
+/*
+Custom Styles for Page
+*/
+@import "http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700)";
+@import "https://fonts.googleapis.com/css?family=Sanchez";
+
+/*
+div#getting-started {
+    font-size: 48px;
+    background-color: #f3f3f3;
+    border: 5px solid #e8e8e8;
+   
+}
+*/
+
+body{
+/*    font-family: "Open Sans", sans-serif;*/
+    font-family: "Sanchez", serif;
+    background: url('../img/wood2.jpg');
+    background-position: center top;
+    background-size: cover;
+    color: #000;
+  
+}
+h1,h2,h3,h4 {
+    font-family: "Sanchez", serif;
+}
+
+h1 {
+    color: #6ac1bc;
+    text-shadow: 0px 2px 5px #000;
+    font-size: 68px;
+    text-transform: uppercase;
+}
+h2.timertitle {
+      margin: 0;
+}
+
+h2.modelname {
+    background: #6ac1bc;
+    color: #fff;
+  
+}
+
+p.intro {
+    font-size: 20px;
+}
+
+.formsection {
+/*	visibility: hidden;*/
+    display: none;
+    margin: 50px;
+    
+}
+
+.formrow {
+    background: #c6c6c6;
+    padding: 25px;
+}
+
+#header {
+        width: 100%;
+    min-height: 75px;
+    padding: 25px;
+    background: #45484d; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #f3f3f3;
+    border-bottom: 1px solid #6ac1bc ;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.5);
+}
+
+#footer {
+    width: 100%;
+    min-height: 75px;
+    padding: 50px;
+     background: #45484d; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #f3f3f3;
+   
+}
+
+#footerlogo {
+    margin: 25px;
+}
+
+.centered{
+    float: none;
+    margin: 0 auto;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+
+span.small {
+    font-size: 18px;
+}
+
+
+.homeimg {
+    max-width:100%;
+max-height:100%;
+}
+
+/*homes */
+.test {
+    padding: 50px;
+    background-color: white;
+}
+
+.card {
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+
+.topdets {
+    background: #fff;
+    min-height: 50px;
+    padding: 0;
+}
+
+.dets {
+    background: #191919;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.detsofdets {
+     text-align: center;
+    font-size: 24px;
+}
+
+
+/*Table*/
+
+
+#countd {
+/*	padding: 25px;*/
+        background: #45484d; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #fff;
+    border-radius: 9px 9px 0px 0px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding: 25px;
+    border-bottom: 2px solid #6ac1bc;
+}
+
+#timer {
+    background: #fff;
+    border-radius:  0px 0px 9px 9px;
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.3);
+    margin-bottom: 35px;
+}
+
+th {
+    text-align: center;
+    font-size: 64px;
+    color: #6ac1bc;
+    padding: 0;
+}
+th.dots {
+    color: #c6c6c6;
+}
+
+td {
+    text-align: center;
+    font-size: 30px;
+    padding: 0;
+}
+
+tr {
+    padding: 0px;
+    
+}
+
+tbody {
+    border: none;
+}
+
+
+footer.foot {
+  width: 100%;
+  background: #6ac1bc;
+  min-height: 75px;
+  position: relative;
+  z-index: 1;
+  border-top: 3px solid #45b1aa;
+  color: #fff;
+  padding-bottom: 2%; }
+
+.foot h4 {
+  font-size: 20px;
+  color: #fff; }
+
+.foot p {
+  font-size: 14px;
+  color: #fff; }
+
+.ftlogo {
+  position: relative; }
+
+.ftlogo img {
+  margin: auto;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  z-index: 2; }
+
+.footnav {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  color: #000;
+  text-align: center; }
+
+.footnav li {
+  margin-left: 50px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.footnav li a {
+  transition: all 0.3s linear;
+  color: #333; }
+
+.footnav li a:hover,
+.footnav li a:focus {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bolder; }
+
+.footbottom {
+  width: 100%;
+  background-color: #333;
+  min-height: 50px;
+  padding: 25px; }
+
+.footbottom p {
+  font-size: 10px;
+  text-align: center;
+  color: #999; }
+
+#socialtop {
+	margin-top:70px;
+}
+
+label.error {
+	color: red;
+}
+
+.fa {
+    color: #fff;
+}
+
+.fa:hover {
+    color: #000;
+}
+
