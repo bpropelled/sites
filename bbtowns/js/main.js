@@ -1,21 +1,11 @@
 (function ($) {
 
     var c = console.log;
-    c("all working");
-
-    //Countdown Begin
-    $('#getting-started').countdown('2017/3/28 9:00:00')
-  
-        
-        .on('update.countdown', function (event) {
-            var $this = $(this);
-            //    var $form = $(#registerform);
-            $this.html(event.strftime('' 
-    //                + '<span>%-d</span> <span class="small">days</span> ' 
-    //                + '<span>%H</span> hr ' 
-    //                + '<span>%M</span> min ' 
-    //                + '<span>%S</span> sec'));
-
+// Trigger the second countdown timer
+    var secondTimer = false;
+    
+// tavle html
+    var timerTable = ''
                     + '<table class="table">'
                     + '<thead>'
                     + '<tr>'
@@ -39,15 +29,47 @@
                     + '<td><span class="small">sec</span></td>'
                     + '</tr>'
                     + '</tbody>'
-                    + '</table>'))
+                    + '</table>'
 
+    //Countdown Begin
+    $('#getting-started').countdown('2017/3/29 9:00:00')
+  
+        
+        .on('update.countdown', function (event) {
+            var $this = $(this);
+            //    var $form = $(#registerform);
+            $this.html(event.strftime('' + timerTable ))
         })
-    .on('finish.countdown', function(event){
+        .on('finish.countdown', function(event){
         
         var $this = $(this);
         var $form = $('.formsection').show();
 //        $this.html('<h1>Done</h1>');
-    });
+        secondTimer = true;
+        });
+    
+    //Second Timer
+    if (secondTimer){
+        
+        $('#getting-deadline').countdown('2017/04/01 12:00:00')
+            .on('update.countdown', function(e){
+                var $this = $(this);
+                $this.html(event.strftime('' + timerTable ))
+        })
+        .on('finish.coutdown', function(e){
+            var $this = $(this);
+            $('.formsection').hide();
+        });
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 //Tilt
 $('#logo').tilt({
